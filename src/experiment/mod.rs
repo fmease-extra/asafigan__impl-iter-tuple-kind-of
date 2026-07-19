@@ -252,7 +252,7 @@ mod test {
     {
         type Item = dyn Example;
 
-        type IntoIter<'a> = T::Iter<'a, dyn Example>
+        type IntoIter<'a> = T::Iter<'a, dyn Example + 'static>
         where
             Self: 'a;
 
